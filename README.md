@@ -1,0 +1,1 @@
+Api pensada para ajudar as pessoas a achar o GITHUB de outras pessoas de uma forma mais simples e saber várias outras coisas dela, como email, quantos repositorios publicos, onde mora, biografia. Vale a pena conferir, fiz com muita dedicação e esforço.
