@@ -33,23 +33,6 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 2,
-    'DEFAULT_AUTHENTICATION_CLASSES':(
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
-}
-#SIMPLE_JWT PARA O TIME DO TOKEN SER MAIOR :)
-SIMPLE_JWT = {
-    # 'JWT_VERIFY_EXPIRATION': False,  # desabilita a verificação de expiração
-    'ACCESS_TOKEN_LIFETIME': timedelta(days=7),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
-    'BLACKLIST_AFTER_ROTATION': False,
-    'SIGNING_KEY': os.environ.get('SECRET_KEY_JWT', 'INSECURE'),
-    'AUTH_HEADER_TYPES': ('Bearer',),
-}
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
