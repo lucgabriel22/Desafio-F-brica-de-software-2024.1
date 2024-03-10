@@ -2,12 +2,10 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
 from apiapp.models import GithubModel
 from .serializers import GithubSerializer
-from rest_framework.permissions import IsAuthenticated
 from . import viewsets
 import requests
 
 class GithubViewSet(ModelViewSet):
-    permission_classes = (IsAuthenticated, )
     serializer_class = GithubSerializer
     queryset = GithubModel.objects.all()
 
