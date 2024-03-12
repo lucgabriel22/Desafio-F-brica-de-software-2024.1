@@ -32,17 +32,27 @@ class GithubViewSet(ModelViewSet):
         json_data = requisicao.json()
 
         login = json_data.get('login', '')
+        name = json_data.get('name', '')
         bio = json_data.get('bio', '')
         email = json_data.get('email', '')
         location = json_data.get('location', '')
         public_repos = json_data.get('public_repos', '')
+        followers = json_data.get('followers', '')
+        following = json_data.get('following', '')
+        created_at = json_data.get('created_at', '')
+        updated_at = json_data.get('updated_at', '')
 
         dados_usuario = {
             'login': login,
             'email': email,
             'location': location,
             'public_repos': public_repos,
-            'bio': bio
+            'bio': bio,
+            'name': name,
+            'followers': followers,
+            'following': following,
+            'created_at': created_at,
+            'updated_at': updated_at,
         }
 
         serializer = GithubSerializer(data=dados_usuario)
